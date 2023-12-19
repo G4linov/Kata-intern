@@ -114,17 +114,21 @@ func main() {
 				outstr = Roman(out)
 				fmt.Println(outstr)
 			case "-":
-				if num1-num2 <= 0 {
-					fmt.Println("No negative numbers in roman")
+				if num1-num2 < 1 {
+					fmt.Println("No negative or zero in roman")
 				} else {
 					out = num1 - num2
 					outstr = Roman(out)
 					fmt.Println(outstr)
 				}
 			case "/":
-				out = num1 / num2
-				outstr = Roman(out)
-				fmt.Println(outstr)
+				if num1-num2 < 1 {
+					fmt.Println("No negative or zero in roman")
+				} else {
+					out = num1 / num2
+					outstr = Roman(out)
+					fmt.Println(outstr)
+				}
 			case "*":
 				out = num1 * num2
 				outstr = Roman(out)
